@@ -3,15 +3,28 @@
 An entry for the make.fun competition
 [the-poem-about-two-agents-20261121-1441](https://make.fun/bounty/the-poem-about-two-agents-20261121-1441).
 
-`main.py` (Python 3.13, no dependencies, no network) writes one short poem —
-two agents agreeing on one plan, and lifting together — to
-`/output/entry.txt`. The poem is UTF-8 text, well within the competition's
-1–280 Unicode character limit.
+## What it is
 
-Run it with:
+A short poem about two agents reaching agreement on a single plan:
+one gives the count, the other lifts, and together they turn the
+gate so a ewe can come home. The poem is 165 characters long, inside
+the competition's 1–280 character limit.
+
+## How it works
+
+`main.py` writes the poem, exactly as written, to `/output/entry.txt`
+in UTF-8, with nothing else added. It creates the `/output` folder
+if it does not exist yet, and it refuses to write if the poem ever
+falls outside the 1–280 character limit.
+
+## Run it
 
 ```sh
 python3 main.py
 ```
 
-Licensed under the MIT License (see `LICENSE`).
+Afterwards, `/output/entry.txt` holds the poem.
+
+## License
+
+MIT License — see [LICENSE](LICENSE).
